@@ -4,9 +4,11 @@ public class App {
     public static void main(String[] args) {	
 	CalculaTroco calcula = new CalculaTroco();
 	
-	calcula.lerParametros();
-	float troco[] = calcula.calcularTroco();
-	System.out.println(calcula.imprimirTroco(troco));
+	float valorTotal = 0f;
+	float valorPago = 0f;
+	
+	
+	System.out.println(calcula.calcularTroco(valorTotal, valorPago));
     }
 
 }
