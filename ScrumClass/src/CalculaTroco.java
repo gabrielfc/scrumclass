@@ -9,6 +9,9 @@ public class CalculaTroco {
 
     public void lerParametros() {
 
+    	
+    	
+    	
 	Scanner scan = new Scanner(System.in);
 
 	valorTotal = scan.nextFloat();
