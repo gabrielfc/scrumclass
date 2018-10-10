@@ -2,12 +2,12 @@ import java.util.Scanner;
 
 public class CalculaTroco {
 
-	
     float valorTotal = 0.0f;
     float valorPago = 0.0f;
     float notas[] = new float[] {};
     float moeda[] = new float[] {};
 
+    
     public void lerParametros() {
 
     	
