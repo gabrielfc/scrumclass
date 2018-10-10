@@ -9,28 +9,30 @@ public class CalculaTroco {
 
     public float[] calcularTroco(float valorTotal, float valorPago) {
 	
-    	float valorTroco = valorTotal - valorPago;
+    	float valorTroco = valorPago - valorTotal;
     	float resultadoTroco[] = new float[] {0, 0, 0, 0, 0};
     	
-    	for(int i=0; i< notas.length; i++)
-    	{
-    		if(valorTroco > notas[i])
-    		{
-    			float divisao = valorTroco/notas[i];
-    			float resto = valorTroco % notas[i];
-    			
-    			if(resto == 0)
-    			{
-    				resultadoTroco[i] = divisao;
-    				break;
-    			}
-    			else
-    			{
-    				resultadoTroco[i] = divisao;
-    				valorTroco = valorTroco - Math.round(divisao)*notas[i]; 
-    			}
-    		}
-    		
+    	if(valorTroco > 0){
+        	for(int i=0; i< notas.length; i++)
+        	{
+        		if(valorTroco >= notas[i])
+        		{
+        			float divisao = valorTroco/notas[i];
+        			float resto = valorTroco % notas[i];
+        			
+        			if(resto == 0)
+        			{
+        				resultadoTroco[i] = divisao;
+        				break;
+        			}
+        			else
+        			{
+        				resultadoTroco[i] = (int)divisao;
+        				valorTroco = valorTroco - ((int)(divisao))*notas[i]; 
+        			}
+        		}
+        		
+        	}
     	}
     	
     	
