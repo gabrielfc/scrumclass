@@ -13,7 +13,7 @@ public class CalculaTrocoTest {
     @Test
     public  void calcularTroco_NegativoTest(){
 	CalculaTroco calculaTroco = new CalculaTroco();
-    	float[] troco = calculaTroco.calcularTroco(1000f, 1000f);
+    	float[] troco = calculaTroco.calcularTroco(1000f, 1000f).getNotas();
     	
     	float[] resultadoEsperado = new float[] {0, 0, 0, 0, 0};
     	
@@ -24,7 +24,7 @@ public class CalculaTrocoTest {
     public void calcularTroco_PositivoTest()
     {
     	CalculaTroco calculaTroco = new CalculaTroco();
-    	float[] troco = calculaTroco.calcularTroco(1000f, 1200f);
+    	float[] troco = calculaTroco.calcularTroco(1000f, 1200f).getNotas();
     	
     	float[] resultadoEsperado = new float[] {2, 0, 0, 0, 0};
     	
@@ -35,7 +35,7 @@ public class CalculaTrocoTest {
     public void calcularTroco_Positivo2Test()
     {
     	CalculaTroco calculaTroco = new CalculaTroco();
-    	float[] troco = calculaTroco.calcularTroco(1000f, 1550f);
+    	float[] troco = calculaTroco.calcularTroco(1000f, 1550f).getNotas();
     	
     	float[] resultadoEsperado = new float[] {5, 1, 0, 0, 0};
     	
@@ -46,7 +46,7 @@ public class CalculaTrocoTest {
     public void calcularTroco_Positivo3Test()
     {
     	CalculaTroco calculaTroco = new CalculaTroco();
-    	float[] troco = calculaTroco.calcularTroco(1000f, 1566f);
+    	float[] troco = calculaTroco.calcularTroco(1000f, 1566f).getNotas();
     	
     	float[] resultadoEsperado = new float[] {5, 1, 1, 1, 1};
     	
@@ -57,7 +57,7 @@ public class CalculaTrocoTest {
     public void calcularTroco_IgualTest()
     {
     	CalculaTroco calculaTroco = new CalculaTroco();
-    	float[] troco = calculaTroco.calcularTroco(1000f, 1000f);
+    	float[] troco = calculaTroco.calcularTroco(1000f, 1000f).getNotas();
     	
     	float[] resultadoEsperado = new float[] {0, 0, 0, 0, 0};
     	
