@@ -4,10 +4,8 @@ public class CalculaTroco {
     float moedas[] = new float[] {0.50f, 0.10f, 0.05f, 0.01f};
     boolean somenteMoedas = false;
 
-   
-
-    public Troco calcularTroco(float valorTotal, float valorPago) {
-	
+    public Troco calcularTroco(float valorTotal, float valorPago)
+    {
     	float valorTroco = valorPago - valorTotal;
     	float resultadoTrocoNotas[] = new float[] {0, 0, 0, 0, 0};
     	float resultadoTrocoMoedas[] = new float[] {0, 0, 0, 0};
