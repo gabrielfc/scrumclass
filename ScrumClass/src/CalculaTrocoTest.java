@@ -1,15 +1,11 @@
 import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
 
 import java.util.Arrays;
 
 import org.junit.Test;
 
 public class CalculaTrocoTest {
-    
-	private String errorMsg = "Not done yet.";
-	
-    
+	    
     @Test
     public  void calcularTroco_NegativoTest(){
 	CalculaTroco calculaTroco = new CalculaTroco();

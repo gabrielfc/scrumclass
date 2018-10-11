@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class CalculaTroco {
 
     float notas[] = new float[] {100, 50, 10, 5, 1};
