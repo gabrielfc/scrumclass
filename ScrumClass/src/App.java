@@ -7,6 +7,16 @@ public class App {
 		float valorTotal = 100f;
 		float valorPago = 150.5f;
 		
-		calcula.mostrarResultado(calcula.calcularTroco(valorTotal, valorPago));
+		Troco troco = calcula.calcularTroco(valorTotal, valorPago);
+		
+		System.out.println("Notas: ");
+    	for (float f : troco.getNotas()) {
+			System.out.print(f + " ");
+		}
+    	
+    	System.out.println("\nMoedas: ");
+    	for (float f : troco.getMoeda()) {
+			System.out.print(f + " ");
+		}
     }
 }

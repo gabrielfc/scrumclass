@@ -51,16 +51,4 @@ public class CalculaTroco {
     	
     	return new Troco(resultadoTrocoNotas,resultadoTrocoMoedas);
     }
-
-    public void mostrarResultado(Troco troco) {
-    	System.out.println("Notas: ");
-    	for (float f : troco.getNotas()) {
-			System.out.print(f + " ");
-		}
-    	
-    	System.out.println("\nMoedas: ");
-    	for (float f : troco.getMoeda()) {
-			System.out.print(f + " ");
-		}
-    }
 }
