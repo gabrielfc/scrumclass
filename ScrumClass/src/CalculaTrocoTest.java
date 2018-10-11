@@ -63,4 +63,18 @@ public class CalculaTrocoTest {
     	
     	assertTrue(Arrays.equals(resultadoEsperado, troco));
     }
+    
+    @Test
+    public void calcularTrocoComMoeda() {
+    	CalculaTroco calculaTroco = new CalculaTroco();
+    	float[] trocoNota = calculaTroco.calcularTroco(100f, 150.5f).getNotas();
+    	float[] trocoMoeda = calculaTroco.calcularTroco(100f, 150.5f).getMoeda();
+    	
+    	float[] resultadoEsperadoNota = new float[] {0, 1, 0, 0, 0};
+    	
+    	float[] resultadoEsperadoMoeda = new float[] {1, 0, 0, 0};
+    	
+    	assertTrue(Arrays.equals(resultadoEsperadoNota, trocoNota));
+    	assertTrue(Arrays.equals(resultadoEsperadoMoeda, trocoMoeda));
+    }
 }
