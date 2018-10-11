@@ -2,6 +2,7 @@ public class CalculaTroco {
 
     float notas[] = new float[] {100, 50, 10, 5, 1};
     float moedas[] = new float[] {0.50f, 0.10f, 0.05f, 0.01f};
+    boolean somenteMoedas = false;
 
    
 
@@ -12,25 +13,27 @@ public class CalculaTroco {
     	float resultadoTrocoMoedas[] = new float[] {0, 0, 0, 0};
     	
     	if(valorTroco > 0){
-        	for(int i=0; i< notas.length; i++)
-        	{
-        		if(valorTroco >= notas[i])
-        		{
-        			float divisao = valorTroco/notas[i];
-        			float resto = valorTroco % notas[i];
-        			
-        			if(resto == 0)
-        			{
-        			    resultadoTrocoNotas[i] = divisao;
-        			    return new Troco(resultadoTrocoNotas,resultadoTrocoMoedas);
-        			}
-        			else
-        			{
-        			    resultadoTrocoNotas[i] = (int)divisao;
-        				valorTroco = valorTroco - ((int)(divisao))*notas[i];         				
-        			}
-        		}
-        		
+    		if(!somenteMoedas)
+    		{
+	        	for(int i=0; i< notas.length; i++)
+	        	{
+	        		if(valorTroco >= notas[i])
+	        		{
+	        			float divisao = valorTroco/notas[i];
+	        			float resto = valorTroco % notas[i];
+	        			
+	        			if(resto == 0)
+	        			{
+	        			    resultadoTrocoNotas[i] = divisao;
+	        			    return new Troco(resultadoTrocoNotas,resultadoTrocoMoedas);
+	        			}
+	        			else
+	        			{
+	        			    resultadoTrocoNotas[i] = (int)divisao;
+	        				valorTroco = valorTroco - ((int)(divisao))*notas[i];         				
+	        			}
+	        		}
+	        	}
         	}
         	
         	for(int j=0;j< moedas.length;j++) {
@@ -52,7 +55,7 @@ public class CalculaTroco {
     }
 
     public void mostrarResultado(Troco troco) {
-    	System.out.println("Notass: ");
+    	System.out.println("Notas: ");
     	for (float f : troco.getNotas()) {
 			System.out.print(f + " ");
 		}
